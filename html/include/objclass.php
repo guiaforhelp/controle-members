@@ -14,7 +14,10 @@ class conectDB extends classMembres {
     }
     
     public function conect(){
-        return new PDO('mysql:host=' .$this->getHostDb(). ';port=' .$this->getPortDb(). ';dbname=' .$this->getNameDb(), $this->getUserDb(), $this->getPassDb());
+        return new PDO('mysql:host=' 
+        .$this->getHostDb(). ';port=' 
+        .$this->getPortDb(). ';dbname=' 
+        .$this->getNameDb(), $this->getUserDb(), $this->getPassDb());
     }  
     
     public function selectMembers(){        
