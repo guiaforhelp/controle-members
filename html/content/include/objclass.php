@@ -21,9 +21,12 @@ class conectDB extends classMembres {
     }  
     
     public function selectMembers(){        
-        $sql = $this->conect()->prepare("SELECT * FROM `control_members` WHERE `nome` LIKE '%miqueias%'");
+        $sql = $this->conect()->prepare("SELECT * FROM `control_members`");
         $sql->execute();
         $sql_member = $sql->fetchAll();
-        print_r($sql_member);
+        // print_r($sql_member);
+        foreach($sql_member as $sql_members){
+            echo $sql_members['nome'].'<br>';
+        }
     }
 }
