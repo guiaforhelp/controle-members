@@ -22,12 +22,16 @@ class conectDB extends classMembres {
     
     public function selectDb($table, $date, $order){
 
-        $sql = $this->conect()->prepare("SELECT * FROM $table ORDER BY $date $order");
+        $sql = $this->conect()->prepare("SELECT * FROM $table ORDER BY nome $order");
         $sql->execute();
-        $sql_member = $sql->fetchAll();      
+        $sql_member = $sql->fetchAll();
 
-        foreach($sql_member as $sql_members){
-            echo $sql_members[$date].'<br>';
+        
+        foreach($sql_member as $sql_members){  
+            foreach($date as $dates){
+                echo '<a href="#">'.$sql_members[$dates].'</a><br>';
+            }         
+
         }
     }
 
@@ -114,4 +118,31 @@ class conectDB extends classMembres {
             ':nome' => $date
         ));
     }
+
+    function crpmInsertDb($name, $id_page, $type_page){
+        $insert = $this->conect()->prepare("INSERT INTO crpm_pages (name_page, id_page, type_page) VALUES (:name, :id_page, :type_page)");
+
+        $query = "SELECT * FROM `crpm_pages` WHERE `id_page` LIKE '$id_page'";
+        $result = $this->conect()->query($query)->fetchAll();
+
+        if(count($result) < 1){
+            $insert->execute(array(
+                ':name' => $name,
+                ':id_page' => $id_page,
+                ':type_page' => $type_page
+            ));
+        }
+    }
+
+    function crpmSelectDb($table, $col, $date){
+        
+        $sql = $this->conect()->prepare("SELECT * FROM `$table` WHERE `$col` LIKE '$date'");
+        $sql->execute();
+        $sql_page = $sql->fetchAll();
+
+        foreach($sql_page as $sql_pages){
+           $sql_pages[$col];
+        }
+    }
+    
 }

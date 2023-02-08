@@ -1,4 +1,6 @@
 <?php
+define('CRPM_VERSION', '1.0');
+
 //--Parametros para conexão com banco de dados
 // ** Configurações do MySQL  ** //
 
@@ -24,12 +26,43 @@ function codLinguage($cod){
     return $array_codlinguage[$cod];
 }
 
+//--Setando favicon
+function urlFavicon($img){
+    $array_favicon = array(
+        "favicon" => "content/img/favicon.png"
+    );
+    return $array_favicon[$img];
+}
+
+//--Setando logotipo
+function urlLogoTipo($img){
+    $array_logo = array(
+        "logo" => "content/img/logo.png"
+    );
+    return $array_logo[$img];
+}
+
+
 
 //--Declaração de idioma do sistema
 function typeLanguage($language){
     $array_language = array(
-     "langBr" => "pt_BR",
-     "langEn" => "en"
+     "langBr" => "pt_BR"     
      );
      return $array_language[$language];
+}
+
+function loadPageMain($page){
+    $array_pages_load_main = array(
+        "main" => "home"
+    );
+    return $array_pages_load_main[$page];
+}
+
+function pagesLoadArray($page){ 
+    $array_pages_load = array(
+        1 => "members",
+        2 => "home"
+    );
+    return $array_pages_load[$page];
 }

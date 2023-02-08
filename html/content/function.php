@@ -5,5 +5,23 @@ require 'footer.php';
 
 require 'include/function.php';
 
-head();
+function loadPages($id){
+    if(isset($_GET['page-id']) &&  $_GET['page-id'] != $id){
+        @header("location:/error-404");
+    }
+
+}
+
+// function loadPageMain(){
+//     if($_SERVER['HTTP_HOST']){
+//         echo 'radando page';
+//     }
+// }
+
+
+function registreScript($content){
+    head($content);   
+}
+
+sample();
 footer();
