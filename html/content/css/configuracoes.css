@@ -1,0 +1,11 @@
+.panel {
+    align-items: center;
+}
+
+.container-all-list {
+    display: flex;
+}
+
+.container-all-list span {
+    text-align: center;
+}

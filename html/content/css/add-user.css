@@ -1,0 +1,55 @@
+.containers {
+    display: flex;
+    gap: 46px;
+}
+
+.container-list-members {
+    display: flex;
+    gap: 46px;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 36px !important;
+}
+
+.list-user a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-user a {
+    text-decoration: none;
+}
+
+.list-user i {
+    background: #1f95d9;
+    color: #ffffff;
+    padding: 18px;
+    border-radius: 78px;
+    font-size: 33px;
+}
+
+.container-all-list thead {
+    background: #edededf2;
+    padding: 10px;
+    height: 53px;
+}
+
+.container-all-list tr {
+    text-align: left;
+}
+
+.container-all-list thead, .container-all-list tbody {
+    font-family: sans-serif;
+    color: #575758;
+}
+
+.container-all-list th, .container-all-list td {
+    width: 301px;
+    padding-inline: 10px;
+}
+
+.container-all-list tbody tr td {
+    padding-top: 20px;
+}

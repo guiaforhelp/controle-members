@@ -97,20 +97,19 @@ function enqueueStyle($name, $src, $ver){
     return "<".$style_array['rel']." ".$style_array['src'].$style_array['ver']." ".$style_array['id'].">";
 }
 
-function enqueueScript($name, $src, $ver, $defer){   
-    $script_array = array(
-        "url_jquery" => '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min',
-        "script" => 'script src=',
-        "close_script" => 'script',
+function enqueueScript($name, $src, $ver, $defer, $url_externo){   
+    $script_array = array(        
         "js" => '.js',
         "ver" => 'ver='       
     );
 
-    if($name == 'jquery'){
+    if($url_externo){
+        $src = $url_externo;
+    }elseif($name == 'jquery'){
         $src = $script_array['url_jquery'];
         $ver = null;
     }else {
-        $src = 'content/js/'.$src;
+        $src = 'content/js/'.$src.$script_array['js'];
     }
 
     if($defer){
@@ -119,7 +118,9 @@ function enqueueScript($name, $src, $ver, $defer){
         $defer = null;
     }
 
-    if($ver == null && $name == 'jquery'){
+    if($url_externo){
+        $ver = null;
+    }elseif($ver == null && $name == 'jquery'){
         $ver = null;
     }elseif($ver == null){
         $ver = '?ver='.CRPM_VERSION;
@@ -127,14 +128,10 @@ function enqueueScript($name, $src, $ver, $defer){
         $ver = '?ver=' . $ver;
     }
 
-     return "<".$script_array['script'].
-     '"'.$src.$script_array['js'].'"'."".
-     $ver." id='".
-     $name."' ".
-     $defer." ></".
-     $script_array['close_script'].">\n";
+     return "<script src='".$src.$ver."' id=".$name." ".$defer."></script>";
     
 }
+
 
 function sanitization($input, $value, $type){
     $type_array = array(

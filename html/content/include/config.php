@@ -26,6 +26,14 @@ function codLinguage($cod){
     return $array_codlinguage[$cod];
 }
 
+//--Definindo host principal do site
+function hostUrlPrin($url){
+    $array_url_prin = array(
+        'url-prin' => '/'
+    );
+    return $array_url_prin[$url];
+}
+
 //--Setando favicon
 function urlFavicon($img){
     $array_favicon = array(
@@ -37,7 +45,7 @@ function urlFavicon($img){
 //--Setando logotipo
 function urlLogoTipo($img){
     $array_logo = array(
-        "logo" => "content/img/logo.png"
+        "logo" => "content/img/logo-branco.png"
     );
     return $array_logo[$img];
 }
@@ -61,8 +69,18 @@ function loadPageMain($page){
 
 function pagesLoadArray($page){ 
     $array_pages_load = array(
-        1 => "members",
-        2 => "home"
+        1 => "list-members",
+        2 => "add-user",
+        3 => "ficha-cadastral",
+        4 => "users-whatsapp",
+        5 => "configuracoes"
+    );
+    return $array_pages_load[$page];
+}
+
+function menuLoadArray($page){ 
+    $array_pages_load = array(
+        1 => "menu-lateral"        
     );
     return $array_pages_load[$page];
 }

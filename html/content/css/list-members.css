@@ -1,0 +1,78 @@
+.container-all-list {
+    background: #ffffff;
+    margin-top: 42px;
+    padding: 64px;
+    width: auto;    
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 5px 0px #46464636;
+}
+
+.container-all-list span {
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+.container-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 66px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 152px;
+    margin-top: 14px;
+}
+
+.list-ico i {
+    font-size: 48px;
+}
+
+.list-write p, .order-list span, .order-list-content span {
+    color: #575758;
+}
+
+.list-write p:first-child {
+    font-size: 23px;
+    font-weight: 700;
+    border-bottom: 3px solid #1f95d9;
+    width: 69px;
+    height: 33px;
+}
+
+.container-all-list {
+    display: flex;
+    row-gap: 13px;
+    flex-direction: column;
+}
+
+.container-all-list thead {
+    background: #edededf2;    
+    padding: 10px;
+    height: 53px;
+}
+
+.container-all-list thead, .container-all-list tbody {
+    font-family: sans-serif;
+    color: #575758;
+}
+
+.container-all-list tbody {
+    font-size: 15px;
+}
+
+.container-all-list tr {
+    text-align: left;
+}
+
+.container-all-list tbody tr td {
+    padding-top: 20px
+}
+
+.container-all-list th, .container-all-list td {
+    width: 301px;
+    padding-inline: 10px
+}

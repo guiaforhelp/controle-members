@@ -1,14 +1,14 @@
 <?php
 function loadPagesSample(){
     if(sanitization('get', 'page-id', 'special_chars')){
-        require 'samples/'.pagesLoadArray('get', 'page-id', 'special_chars').'.php';          
+        require 'samples/'.pagesLoadArray(sanitization('get', 'page-id', 'special_chars')).'.php';          
     }else {
         require 'samples/'.loadPageMain('main').'.php';
     }
 }
 function sample(){
     // insertMembers(
-    //     'Miquéias Silva', 
+    //     'Stephanie Souza', 
     //     '383.322.408-83', 
     //     '1990-09-06', 
     //     'solteiro', 

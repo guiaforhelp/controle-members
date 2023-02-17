@@ -1,3 +1,25 @@
-*{
-    box-sizing: 0;
+.container-list-members {
+    display: flex;
+    gap: 62px;
+}
+
+.container-list-members a {
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    width: 127px;
+    align-items: center;
+}
+
+.container-list-members a i {
+    background: #1f95d9;
+    color: #ffffff;
+    padding: 39px;
+    border-radius: 78px;
+    font-size: 48px;
+}
+
+.container-list-members a p {
+    text-align: center;
 }
