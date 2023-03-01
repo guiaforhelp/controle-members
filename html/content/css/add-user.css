@@ -12,6 +12,11 @@
     padding: 36px !important;
 }
 
+.list-user {
+    display: flex;
+    justify-content: center;
+}
+
 .list-user a {
     display: flex;
     flex-direction: column;

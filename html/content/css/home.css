@@ -23,3 +23,9 @@
 .container-list-members a p {
     text-align: center;
 }
+
+@media only screen and (max-width: 600px) {  
+    .container-list-members a i {        
+        padding: 21px;      
+    }
+}

@@ -17,6 +17,7 @@ $page_array = array(
 <a <?php echo @$page_array[3]; ?> href="/?page-id=3" title="Exibir ficha cadastral do membro"><i class="ph-identification-card-bold"></i></a>
 <a <?php echo @$page_array[4]; ?> href="/?page-id=4" title="Iniciar conversa com membro"><i class="ph-whatsapp-logo-bold"></i></a>
 <a <?php echo @$page_array[5]; ?> href="/?page-id=5" title="Configurações"><i class="ph-gear-bold"></i></a>
+<p>v1.0.0 (beta)</p>
 </div>
 
 <div class="lateral-menu">

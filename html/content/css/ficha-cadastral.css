@@ -78,3 +78,28 @@
     max-height: 319px;
     height: 163px;
 }
+
+@media only screen and (max-width: 600px) {
+    .panel {        
+        padding: 0px 77px !important;
+    }
+
+    .container-list-members form {
+        width: 100%;
+    }
+
+    .name-description {               
+        align-items: flex-start;        
+        flex-direction: column;
+    }
+
+    .content-form {       
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .date-container {
+        padding: 24px;
+        width: 100%;        
+    }
+}

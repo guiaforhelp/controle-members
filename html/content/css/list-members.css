@@ -76,3 +76,13 @@
     width: 301px;
     padding-inline: 10px
 }
+
+@media only screen and (max-width: 600px) {
+    .container-list-members {
+        display: none;
+    }
+
+    .container-all-list {        
+        padding: 14px;        
+    }
+}
