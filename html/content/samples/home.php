@@ -1,9 +1,9 @@
 <?php
   
       registreScript(array(            
-          enqueueScript('jquery-3.6.3', 'jquery-3.6.3.min', false, true, false),
-          enqueueScript('ajax', 'ajax', false, true, false),          
-          enqueueStyle('home', 'home', false)
+          enqueueScript('jquery-3.6.3', 'jquery-3.6.3.min', false, false, true, false),
+          enqueueScript('ajax', 'ajax', false, false, true, false),          
+          enqueueStyle('home', 'home', false, false)
       ));
   ?>
 

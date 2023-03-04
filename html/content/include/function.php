@@ -81,15 +81,19 @@ function favicon($src_favicon) {
     .$array_favicon['type']."> \n";
 }
 
-function enqueueStyle($name, $src, $ver){    
+function enqueueStyle($name, $src, $url, $ver){    
     if($ver == null){
         $ver = CRPM_VERSION;
+    }
+
+    if($url == false){
+        $url = 'content/css/';
     }
 
     $style_array = array(
         "rel" => 'link rel="stylesheet"',        
         "type" => 'type="text/css"',
-        "src" => 'href="content/css/'.$src.'.css?',
+        "src" => 'href="'.$url.$src.'.css?',
         "ver" => 'ver='.$ver.'"',
         "id" => 'id="'.$name.'"'
     );
@@ -97,11 +101,15 @@ function enqueueStyle($name, $src, $ver){
     return "<".$style_array['rel']." ".$style_array['src'].$style_array['ver']." ".$style_array['id'].">";
 }
 
-function enqueueScript($name, $src, $ver, $defer, $url_externo){   
+function enqueueScript($name, $src, $url, $ver, $defer, $url_externo){   
     $script_array = array(        
         "js" => '.js',
         "ver" => 'ver='       
     );
+
+    if($url == false){
+        $url = 'content/js/';
+    }
 
     if($url_externo){
         $src = $url_externo;
@@ -109,7 +117,7 @@ function enqueueScript($name, $src, $ver, $defer, $url_externo){
         $src = $script_array['url_jquery'];
         $ver = null;
     }else {
-        $src = 'content/js/'.$src.$script_array['js'];
+        $src = $url.$src.$script_array['js'];
     }
 
     if($defer){
@@ -147,4 +155,13 @@ function sanitization($input, $value, $type){
     );
 
     return filter_input($input_array[$input], $value, $type_array[$type]); 
+}
+
+function pluginUrl($url){     
+    $url = explode('html', $url);
+    return $url[1];
+}
+
+function Host(){
+    return 'http://'.$_SERVER['HTTP_HOST'];
 }

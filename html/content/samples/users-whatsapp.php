@@ -1,10 +1,10 @@
 <?php
 
 registreScript(array(            
-    enqueueScript('jquery-3.6.3', 'jquery-3.6.3.min', false, true, false),
-    enqueueScript('ajax', 'ajax', false, true, false),          
-    enqueueStyle('add-user', 'add-user', false),
-    enqueueStyle('users-whatsapp', 'users-whatsapp', false)
+    enqueueScript('jquery-3.6.3', 'jquery-3.6.3.min', false, false, true, false),
+    enqueueScript('ajax', 'ajax', false, false, true, false),          
+    enqueueStyle('add-user', 'add-user', false, false),
+    enqueueStyle('users-whatsapp', 'users-whatsapp', false, false)
 ));
 ?>
 

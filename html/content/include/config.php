@@ -78,9 +78,14 @@ function pagesLoadArray($page){
     return $array_pages_load[$page];
 }
 
-function menuLoadArray($page){ 
-    $array_pages_load = array(
-        1 => "menu-lateral"        
-    );
-    return $array_pages_load[$page];
+function menuLoadArray(){ 
+    $array_menu_load = array(
+        "lateral-menu",
+        "horizontal-menu"      
+    );    
+    return $array_menu_load;
+}
+
+function navMenuLoadArray(){
+
 }

@@ -1,0 +1,41 @@
+{
+    "menu_horizontal":[
+       {
+        "nome":  [
+            "ph-user-circle-bold",
+            "ph-identification-badge-bold",
+            "ph-identification-card-bold",
+            "ph-whatsapp-logo-bold",
+            "ph-gear-bold"
+        ],
+
+        "title": [
+            "Exibir lista de usuários",
+            "Cadastro de usuários",
+            "Exibir ficha cadastral do membro",
+            "Iniciar conversa com membro",
+            "Configurações"
+        ]
+       }
+    ],
+
+    "menu_lateral": [
+        {
+            "nome": [
+                "Exibir lista de usuários",
+                "Cadastro de usuários",
+                "Exibir ficha cadastral do membro",
+                "Iniciar conversa com membro",
+                "Configurações"
+            ],
+            "title": [
+                "Exibir lista de usuários",
+                "Cadastro de usuários",
+                "Exibir ficha cadastral do membro",
+                "Iniciar conversa com membro",
+                "Configurações"
+            ]
+        }
+    ]
+
+}

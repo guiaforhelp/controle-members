@@ -1,6 +1,6 @@
 <?php 
-function loadMenuHeader(){
-    require 'header/'.menuLoadArray(1).'.php';   
+function loadMenuHeader(){    
+    require 'header/function.php';    
 }
 
 
