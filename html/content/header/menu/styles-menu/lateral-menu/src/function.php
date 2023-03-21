@@ -1,6 +1,6 @@
 <?php
 registreScript(array(  
-    enqueueScript('lateral-menu', 'lateral-menu', LATERAL_MENU_PLUGIN_SRC, LATERAL_MENU_VERSION, true, false),        
+    enqueueScript('lateral-menu', false, 'lateral-menu', LATERAL_MENU_PLUGIN_SRC, LATERAL_MENU_VERSION, true, false),        
     enqueueStyle('lateral-menu', 'lateral-menu', LATERAL_MENU_PLUGIN_SRC, false)
 ));
 

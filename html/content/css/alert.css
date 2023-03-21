@@ -1,0 +1,65 @@
+
+@keyframes rollsideright {
+    from {        
+        transform: translateX(368px);
+    }    
+
+    to {
+        transform: translateX(0px);
+    }
+
+}
+
+@keyframes rollsideleft {
+    from {
+        transform: translateX(0px);
+    }
+
+    to {
+        transform: translateX(368px);
+    }
+}
+
+
+#alert-message {
+    display: none;    
+}
+
+.success {   
+    background: #b9dfff;
+    color: #003e72;    
+    border-left: 6px solid #3a90d9;    
+    box-shadow: 6px 3px 12px 0px #4d8ada8c;    
+    z-index: 1001;
+}
+
+.attention {   
+    background: #ffe9e9;
+    color: #7e0c0c;
+    border-left: 6px solid #d53838;
+    box-shadow: 6px 3px 12px 0px #e346466b;  
+    z-index: 1002;
+}
+
+.success, .attention {
+    animation-duration: 2s;
+    animation-name: rollsideright;
+
+    position: fixed;
+    right: 0;
+    top: 36rem;
+    padding: 31px 54px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;    
+    transition: all ease .5s;
+    overflow: hidden;
+}
+
+.active-animation-left {    
+    transition: all ease .5s; 
+    animation-duration: 2s;   
+    animation-name: rollsideleft;
+    /* opacity: 0;   */
+    overflow: auto;   
+}

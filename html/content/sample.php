@@ -1,7 +1,7 @@
 <?php
 function loadPagesSample(){
     if(sanitization('get', 'page-id', 'special_chars')){
-        require 'samples/'.pagesLoadArray(sanitization('get', 'page-id', 'special_chars')).'.php';          
+        require 'samples/'.pagesLoadArray(sanitization('get', 'page-id', 'special_chars')).'/index.php';          
     }else {
         require 'samples/'.loadPageMain('main').'.php';
     }
@@ -14,7 +14,8 @@ function sample(){
     //     'solteiro', 
     //     'São Paulo', 
     //     'Doutor Osmany Borges', 
-    //     '395', '05878-020', 
+    //     '395', 
+    //     '05878-020', 
     //     'São Paulo',
     //     '2013-02-08', 
     //     '2030-02-08', 

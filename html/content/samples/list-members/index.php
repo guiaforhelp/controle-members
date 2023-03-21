@@ -1,8 +1,8 @@
 <?php
   
       registreScript(array(            
-          enqueueScript('jquery-3.6.3', 'jquery-3.6.3.min', false, false, true, false),
-          enqueueScript('ajax', 'ajax', false, false, true, false),          
+          enqueueScript('jquery-3.6.3', false, 'jquery-3.6.3.min', false, false, true, false),
+          enqueueScript('ajax', false, 'ajax', false, false, true, false),          
           enqueueStyle('list-members', 'list-members', false, false)
       ));
   ?>

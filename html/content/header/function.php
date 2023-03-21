@@ -6,8 +6,8 @@ foreach(menuLoadArray() as $menu_loaded){
 }
 
 registreScript(array(    
-    enqueueScript('phosphor', false, false, false, true, 'https://unpkg.com/phosphor-icons'),
-    enqueueScript('header', 'header', false, false, true, false),     
+    enqueueScript('phosphor', false, false, false, false, true, 'https://unpkg.com/phosphor-icons'),
+    enqueueScript('header', false, 'header', false, false, true, false),     
     enqueueStyle('header', 'head', false, false)
 ));
 ?>

@@ -86,6 +86,12 @@ function menuLoadArray(){
     return $array_menu_load;
 }
 
-function navMenuLoadArray(){
 
+/** Alertas */
+function alertForm($alert){
+    $array_alert_form = array(
+        "attention" => "Um dos campos estão em branco !!!",
+        "success" => "Usuário cadastrado com sucesso"
+    );
+    return $array_alert_form[$alert];
 }

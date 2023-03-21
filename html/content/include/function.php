@@ -9,6 +9,8 @@
 
 require 'objclass.php';
 require 'config.php';
+require 'validation.php';
+require 'alert.php';
 
 function selectMembers($date, $order){
     
@@ -101,11 +103,17 @@ function enqueueStyle($name, $src, $url, $ver){
     return "<".$style_array['rel']." ".$style_array['src'].$style_array['ver']." ".$style_array['id'].">";
 }
 
-function enqueueScript($name, $src, $url, $ver, $defer, $url_externo){   
+function enqueueScript($name, $modules, $src, $url, $ver, $defer, $url_externo){   
     $script_array = array(        
         "js" => '.js',
         "ver" => 'ver='       
     );
+
+    if($modules == true){
+        $modules = 'type="module"';
+    }else {
+        $modules = null;
+    }
 
     if($url == false){
         $url = 'content/js/';
@@ -136,7 +144,7 @@ function enqueueScript($name, $src, $url, $ver, $defer, $url_externo){
         $ver = '?ver=' . $ver;
     }
 
-     return "<script src='".$src.$ver."' id=".$name." ".$defer."></script>";
+     return "<script ".$modules." src='".$src.$ver."' id=".$name." ".$defer."></script>";
     
 }
 

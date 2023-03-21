@@ -1,6 +1,6 @@
 <?php
 registreScript(array(  
-    enqueueScript('horizontal-menu', 'horizontal-menu', HORIZONTAL_MENU_PLUGIN_SRC, HORIZONTAL_MENU_VERSION, true, false),        
+    enqueueScript('horizontal-menu', false, 'horizontal-menu', HORIZONTAL_MENU_PLUGIN_SRC, HORIZONTAL_MENU_VERSION, true, false),        
     enqueueStyle('horizontal-menu', 'horizontal-menu', HORIZONTAL_MENU_PLUGIN_SRC, HORIZONTAL_MENU_VERSION)
 ));
 

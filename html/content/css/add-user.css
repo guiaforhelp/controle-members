@@ -35,6 +35,12 @@
     font-size: 33px;
 }
 
+.container-all-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .container-all-list thead {
     background: #edededf2;
     padding: 10px;
@@ -57,4 +63,29 @@
 
 .container-all-list tbody tr td {
     padding-top: 20px;
+}
+
+.container-all-list a {
+    display: contents;
+}
+
+.date-child input, .date-child select, .date-child textarea {
+    padding: 9px 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    background: #4d8ada;
+    color: #ffffff;
+}
+
+input[type='submit']:hover {
+    text-decoration: underline;
+}
+
+.add-date-focus-active {
+    border: 1px solid #df1919 !important;
+    background: #fff3f3;
 }
