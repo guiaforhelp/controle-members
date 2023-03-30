@@ -1,3 +1,7 @@
+<?php
+function listMembersAddUser($id_page){
+?>
+
 <span>Ultimos adicionados</span>
 <table>
             <thead>
@@ -14,54 +18,13 @@
             <tbody>
                 <tr>
                     <td>
-                        <a href="#">Miquéias Silva</a>
-                    </td>   
-                    <td>30/05/2025</td>             
-                    <td>Ativo</td>
-                    <td>Levita</td>
-                    <td>
-                        <a href="#">Editar</a> 
-                    </td>
-                    <td>
-                        <a href="#">Remover</a>
-                    </td>
-                </tr>    
-                <tr>
-                    <td>
-                        <a href="#">Miquéias Silva</a>
-                    </td>   
-                    <td>30/05/2025</td>              
-                    <td>Ativo</td>
-                    <td>Levita</td>
-                    <td>
-                        <a href="#">Editar</a> 
-                    </td>
-                    <td>
-                        <a href="#">Remover</a>
-                    </td>
-                </tr>   
-                <tr>
-                <td>
-                        <a href="#">Miquéias Silva</a>
-                    </td>    
-                    <td>30/05/2025</td>            
-                    <td>Ativo</td>
-                    <td>Levita</td>
-                    <td>
-                        <a href="#">Editar</a> 
-                    </td>
-                    <td>
-                        <a href="#">Remover</a>
-                    </td>
-                </tr>   
-                <tr>
-                <td>
-                        <a href="#">Miquéias Silva</a>
+                        <a href="#"><?php echo selectMembers(array('nome'), 'ASC'); ?></a>
                     </td>     
-                    <td>30/05/2025</td>           
-                    <td>Ativo</td>
-                    <td>Levita</td>
+                    <td><?php echo selectMembers(array('validade_carteirinha'), 'ASC'); ?></td>           
+                    <td><?php echo selectMembers(array('situacao_membro'), 'ASC'); ?></td>
+                    <td><?php echo selectMembers(array('cargo'), 'ASC'); ?></td>
                     <td>
+                        <?php echo countDbData('nome') ?>
                         <a href="#">Editar</a> 
                     </td>
                     <td>
@@ -70,3 +33,6 @@
                 </tr>                         
             </tbody>
         </table>
+<?php
+}
+?>

@@ -10,7 +10,10 @@ registreScript(array(
 
 
 $page_add_user = array(
-    'add'=>'add-user'
+    'add'=>'add-user',
+    'edit'=>'edit-user',
+    'remove'=>'remove-user'
 );
 
 HomeAddUser($page_add_user[sanitization('get', 'type', 'url')]);
+

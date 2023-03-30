@@ -61,6 +61,11 @@ function updateMembers($id, $col, $date){
     $update->updateDb($id, $col, $date);
 }
 
+function countDbData($date){
+    $count = new conectDB();
+    $count->countDb($date);
+}
+
 function insertPage($name, $id_page, $type_page){
     $crpmdb = new conectDB();
     $crpmdb->crpmInsertDb($name, $id_page, $type_page);

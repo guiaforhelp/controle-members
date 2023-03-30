@@ -23,7 +23,7 @@ function sample(){
     //     'Levita', 
     //     'ESte é um teste para ver se vai dar certo');
 
-    // selectMembers('nome', 'ASC');
+    // selectMembers(array('nome'), 'ASC');
     // updateMembers('13', 'estado_civil', 'solteiro');
     // deleteMembers('14');  
 

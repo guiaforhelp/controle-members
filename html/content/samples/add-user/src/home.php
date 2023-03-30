@@ -34,12 +34,13 @@
         <div class="container-all-list">
     
         <?php
-            if($id_page){
-                require $id_page.'.php';                
-            }else {
-                require 'init.php';
-            }
-    
+
+        if($id_page){
+            require $id_page.'.php';                
+        }else {
+            require 'init.php';
+            listMembersAddUser($id_page);
+        }
         ?>    
         
         </div>

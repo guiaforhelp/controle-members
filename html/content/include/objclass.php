@@ -119,6 +119,18 @@ class conectDB extends classMembres {
         ));
     }
 
+    public function countDb($date){
+        // $dbh = new \PDO($dsn, $user, $password);
+        // $sth = $dbh->prepare('SELECT count(*) as total from Students');
+        // $sth->execute();
+        // print_r($sth->fetchColumn());
+
+        $query = "SELECT count(*) as $date FROM `control_members`";
+        $result = $this->conect()->prepare($query);
+        $result->execute();
+        return $result->fetchColumn();
+    }
+
     function crpmInsertDb($name, $id_page, $type_page){
         $insert = $this->conect()->prepare("INSERT INTO crpm_pages (name_page, id_page, type_page) VALUES (:name, :id_page, :type_page)");
 
