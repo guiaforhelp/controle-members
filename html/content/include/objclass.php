@@ -29,7 +29,7 @@ class conectDB extends classMembres {
         
         foreach($sql_member as $sql_members){  
             foreach($date as $dates){
-                echo '<a href="#">'.$sql_members[$dates].'</a><br>';
+                return $sql_members[$dates];
             }         
 
         }
@@ -120,15 +120,33 @@ class conectDB extends classMembres {
     }
 
     public function countDb($date){
-        // $dbh = new \PDO($dsn, $user, $password);
-        // $sth = $dbh->prepare('SELECT count(*) as total from Students');
-        // $sth->execute();
-        // print_r($sth->fetchColumn());
-
         $query = "SELECT count(*) as $date FROM `control_members`";
         $result = $this->conect()->prepare($query);
         $result->execute();
         return $result->fetchColumn();
+    }
+
+    public function tableDb($table, $date, $orders){
+        $array_type = array(
+            'table-members' => 'control_members'
+        );
+        $t_db = $array_type[$table];
+
+        $sql = $this->conect()->query("SELECT * FROM $t_db ORDER BY nome $orders");
+        $sql->execute();
+        $sql_tables = $sql->fetchAll();
+
+        foreach($sql_tables as $tables){
+            foreach($date as $dates){
+                echo $tables[$dates];
+                echo $date[1];
+            }   
+            
+            // for($n=0; $n<=1; $n++){
+            //     echo $date[$n];
+            // }
+        }
+        
     }
 
     function crpmInsertDb($name, $id_page, $type_page){

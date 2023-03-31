@@ -15,7 +15,7 @@ require 'alert.php';
 function selectMembers($date, $order){
     
     $selectM = new conectDB();
-    $selectM->selectDb('control_members', $date, $order);
+    return $selectM->selectDb('control_members', $date, $order);
 }
 
 function insertMembers(
@@ -63,7 +63,12 @@ function updateMembers($id, $col, $date){
 
 function countDbData($date){
     $count = new conectDB();
-    $count->countDb($date);
+    return $count->countDb($date);
+}
+
+function tables($table, $date, $orders){
+    $tableDb = new conectDB();
+    $tableDb->tableDb($table, $date, $orders);
 }
 
 function insertPage($name, $id_page, $type_page){
