@@ -11,6 +11,7 @@ require 'objclass.php';
 require 'config.php';
 require 'validation.php';
 require 'alert.php';
+require 'tags.php';
 
 function selectMembers($date, $order){
     
@@ -66,9 +67,9 @@ function countDbData($date){
     return $count->countDb($date);
 }
 
-function tables($table, $date, $orders){
+function tables($table, $date, $date_external, $orders){
     $tableDb = new conectDB();
-    $tableDb->tableDb($table, $date, $orders);
+    return $tableDb->tableDb($table, $date, $date_external, $orders);
 }
 
 function insertPage($name, $id_page, $type_page){

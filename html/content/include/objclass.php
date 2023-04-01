@@ -126,7 +126,7 @@ class conectDB extends classMembres {
         return $result->fetchColumn();
     }
 
-    public function tableDb($table, $date, $orders){
+    public function tableDb($table, $date, $date_external, $orders){
         $array_type = array(
             'table-members' => 'control_members'
         );
@@ -134,17 +134,31 @@ class conectDB extends classMembres {
 
         $sql = $this->conect()->query("SELECT * FROM $t_db ORDER BY nome $orders");
         $sql->execute();
-        $sql_tables = $sql->fetchAll();
+        $sql_tables = $sql->fetchAll();         
+        
 
         foreach($sql_tables as $tables){
+            echo '<tr>';
             foreach($date as $dates){
-                echo $tables[$dates];
-                echo $date[1];
+                $date_explode = explode('%%', $dates);
+               
+                if(!in_array(@$date_explode[1], $date_explode)){
+                    echo '<td>'.$tables[$date_explode[0]].'</td>';                     
+                }else {
+                    echo '<td><a href="'.@$date_explode[1].'">'.$tables[$date_explode[0]].'</a></td>';                      
+                }                                
             }   
-            
-            // for($n=0; $n<=1; $n++){
-            //     echo $date[$n];
-            // }
+
+            foreach($date_external as $dates_externals){
+                $dates_exter = explode('%%', $dates_externals);
+
+                if(!in_array($dates_exter[1], $dates_exter)){
+                    echo '<td>'.$dates_exter[0].'</td>';                    
+                }else {
+                    echo '<td><a href="'.@$dates_exter[1].'">'.$dates_exter[0].'</a></td>';                     
+                }
+            }
+            echo '</tr>';         
         }
         
     }
