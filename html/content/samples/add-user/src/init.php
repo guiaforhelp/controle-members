@@ -25,7 +25,7 @@ function listMembersAddUser($id_page){
                             'cargo'
                         ), array(
                             __link('Editar', '#'), 
-                            __link('Remover', '#')), 
+                            __link('Remover', '&remove='.idUser(tables('table-members', array('nome'))))), 
                             'ASC');                          
                     ?>                 
             </tbody>

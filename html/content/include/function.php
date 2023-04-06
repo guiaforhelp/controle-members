@@ -62,6 +62,11 @@ function updateMembers($id, $col, $date){
     $update->updateDb($id, $col, $date);
 }
 
+function idUser($date){
+    $id_user = new conectDB();
+    return $id_user->idUserDb($date);
+}
+
 function countDbData($date){
     $count = new conectDB();
     return $count->countDb($date);

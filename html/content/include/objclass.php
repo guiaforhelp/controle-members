@@ -119,6 +119,16 @@ class conectDB extends classMembres {
         ));
     }
 
+    public function idUserDb($date){
+        $sql = $this->conect()->prepare("SELECT * FROM `control_members`WHERE `nome` = '$date'");
+        $sql->execute();
+        $sql_id_user = $sql->fetchAll();
+
+        foreach($sql_id_user as $user_id){
+            return $user_id['ID'];
+        }
+    }
+
     public function countDb($date){
         $query = "SELECT count(*) as $date FROM `control_members`";
         $result = $this->conect()->prepare($query);

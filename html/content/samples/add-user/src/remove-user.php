@@ -1,6 +1,6 @@
 <?php
 require 'init.php';
 
-//listMembersAddUser($id_page);
-echo '<h1>Sem descrição por enquanto</h1>'
+echo '<h3>Aqui será aonde irá mostrar o histórico do membros<br> 
+removidos do banco de dados e serão restaurados caso necessário</h3>';
 ?>
