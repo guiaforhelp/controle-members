@@ -18,7 +18,7 @@ echo generationAlert();
             <form method="post" id="form-new-member">
                 <input type="hidden" id="add-rg" value="">
                 <input type="hidden" id="add-nascimento" value="0001-01-01">
-                <input type="hidden" id="add-estcivil" value="">
+                <input type="hidden" id="add-estcivil" value="Selecione">
                 <input type="hidden" id="add-naturalidade" value="">
                 <input type="hidden" id="add-adress" value="">
                 <input type="hidden" id="add-n-adress" value="0">

@@ -8,6 +8,7 @@ const form_head = {
     },
 
     form(element, element2, content, content2){
+        
         form_head.get(element).addEventListener('submit', (event)=>{
             event.preventDefault();              
             
@@ -39,11 +40,24 @@ const form_validation = {
         
         setTimeout(()=> {
             form_head.get(element).classList.remove('active-animation-left');                    
-        }, 6000); 
+        }, 6000);        
+    },
+
+    tags() {
+
+        for (let data_form of form_head.get('input[type="data"]')) {
+            if(data_form.value == '0001-01-01'){
+                console.log(data_form.value);
+            }
+        }
     }
-   
+
 }
 
 export function init(element, element2, content, content2){
-    form_head.form(element, element2, content, content2);          
+    form_validation.tags();
+
+    if(form_head.get(element) !== null){
+        form_head.form(element, element2, content, content2);
+    }             
 }
