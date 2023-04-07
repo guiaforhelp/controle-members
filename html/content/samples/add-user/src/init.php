@@ -17,7 +17,9 @@ function listMembersAddUser($id_page){
 
             <tbody>
             <?php
-                     tables('table-members', 
+
+            if(countDbData('ID') > 0){
+                tables('table-members', 
                         array(
                             __link('nome', '#'), 
                             'validade_carteirinha', 
@@ -25,9 +27,12 @@ function listMembersAddUser($id_page){
                             'cargo'
                         ), array(
                             __link('Editar', '#'), 
-                            __link('Remover', '&remove='.idUser(tables('table-members', array('nome'))))), 
-                            'ASC');                          
-                    ?>                 
+                            __link('Remover', urlCurrent().'&remove=$ID')), 
+                            'ASC');
+            }else {
+                echo '<h3>Nenhum usuário cadastrado</h3>';
+            }                                           
+            ?>                 
             </tbody>
         </table>
 <?php

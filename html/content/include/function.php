@@ -189,3 +189,7 @@ function pluginUrl($url){
 function Host(){
     return 'http://'.$_SERVER['HTTP_HOST'];
 }
+
+function urlCurrent(){
+    return $_SERVER['REQUEST_URI'];
+}

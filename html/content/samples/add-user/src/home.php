@@ -19,8 +19,8 @@
                     </a>
                 </div>
                 <div class="list-user">
-                    <a href="?page-id=<?php echo sanitization('get', 'page-id', 'int'); ?>&type=edit">
-                        <i class="ph-user-focus-bold"></i><p>Editados</p>
+                    <a href="?page-id=<?php echo sanitization('get', 'page-id', 'int'); ?>&type=views">
+                    <i class="ph-bold ph-users"></i><p>Exibir</p>
                     </a>
                 </div>
                 <div class="list-user">           

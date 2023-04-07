@@ -158,6 +158,7 @@ class conectDB extends classMembres {
                     echo '<td><a href="'.@$date_explode[1].'">'.$tables[$date_explode[0]].'</a></td>';                      
                 }                                
             }   
+            
 
             foreach($date_external as $dates_externals){
                 $dates_exter = explode('%%', $dates_externals);
@@ -165,10 +166,13 @@ class conectDB extends classMembres {
                 if(!in_array($dates_exter[1], $dates_exter)){
                     echo '<td>'.$dates_exter[0].'</td>';                    
                 }else {
-                    echo '<td><a href="'.@$dates_exter[1].'">'.$dates_exter[0].'</a></td>';                     
+
+                    $link_sql = explode('$', @$dates_exter[1]);                  
+                    echo '<td><a href="'.@$link_sql[0].@$tables[@$link_sql[1]].'">'.$dates_exter[0].'</a></td>';  
+
                 }
             }
-            echo '</tr>';         
+            echo '</tr>';
         }
         
     }
