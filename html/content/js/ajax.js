@@ -77,3 +77,34 @@ $('#form-new-member').submit(()=> {
         // }
     })
 });
+
+
+
+$('#edit_members').submit((event)=>{
+    event.preventDefault();  
+    
+    $.ajax({
+        url: "",
+        method: "POST",
+        data: {
+            eidtid: $('#id').val(),
+            editrg: $('#rg').val(),
+            editdatanasc: $('#data_nascimento').val(),
+            editestcivil: $('#estado_civil').val(),
+            editnatestado: $('#estado_natu').val(),
+            editnatcidade: $('#cidade_natu').val(),
+            editend: $('#endereco').val(),
+            editnend: $('#n').val(),
+            editcep: $('#cep').val(),
+            editendcidade: $('#cidade').val(),
+            editdatabatismo: $('#data_batismo').val(),
+            editvalcarteirinha: $('#validade_carteirinha').val(),
+            editsitumembro: $('#situacao_membro').val(),
+            editcargo: $('#cargo').val(),
+            editobs: $('#obs').val()
+        },
+        dataType: "html"
+    }).done(function(){
+        console.log('carregado com sucesso');
+    });
+});

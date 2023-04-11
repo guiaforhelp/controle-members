@@ -33,6 +33,11 @@
     font-weight: 600;
 }
 
+.horizontal-menu .ph-whatsapp-logo-bold, .horizontal-menu .ph-gear-bold {
+    color: #7a7a7a !important;
+    cursor: not-allowed;
+}
+
 @media only screen and (max-width: 600px) {
     .horizontal-menu {
         z-index: 100;

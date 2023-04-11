@@ -2,16 +2,17 @@
     <div class="search">
         <p>FICHA DE CADASTRO</p>      
         <form method="get">
-            <input type="search" name="search_members" id="search_members" placeholder="Procurar por membro">
-            <input type="submit" value="Buscar">
+            <input type="search" disabled name="search_members" id="search_members" placeholder="Procurar por membro">
+            <input type="submit" disabled value="Buscar">
         </form>
     </div>    
 
    <div class="container-list-members">
-       <form method="post">
+       <form method="post" id="edit_members">
             <div class="name-description">
                 <div class="name"><?php echo ucfirst(search(sanitization('get', 'edit', 'url'), 'table-members', 'nome')); ?></div>
                 <input type="submit" value="Enviar ficha de membro">
+                <input type="hidden" id="id" value="<?php echo sanitization('get', 'edit', 'url'); ?>">
             </div>
 
             <div class="content-form">
@@ -26,7 +27,7 @@
                     </div>
                     <div class="date-child">
                         <span>ESTADO CIVIL</span>
-                        <select name="estado_civil" id="estado_civil select_form">
+                        <select name="estado_civil" id="estado_civil">
                             <option value="<?php echo selectMembers(array('estado_civil'), 'ASC') ?>"><?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'estado_civil') ?></option>
                             <option value="Solteiro">Solteiro</option>
                             <option value="Casado">Casado</option>
@@ -34,9 +35,9 @@
                         </select>                  
                     </div>
                     <div class="date-child">
-                        <span>NATURALDIADE</span>
-                        <input type="text" name="estado" id="estado" placeholder="Estado" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'naturalidade') ?>">         
-                        <input type="text" name="cidade" id="cidade" placeholder="Cidade" value="São Paulo">   
+                        <span>NATURALIDADE</span>
+                        <input type="text" name="estado" id="estado_natu" placeholder="Estado" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'naturalidade') ?>">         
+                        <input type="text" name="cidade" id="cidade_natu" placeholder="Cidade" value="São Paulo">   
                     </div>
                     <div class="date-child">
                         <span>ENDEREÇO</span>

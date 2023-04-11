@@ -24,6 +24,11 @@
     text-align: center;
 }
 
+.container-list-members .ph-whatsapp-logo-bold, .container-list-members .ph-gear-bold {
+    color: #6baee8 !important;
+    cursor: not-allowed;
+}
+
 @media only screen and (max-width: 600px) {  
     .container-list-members a i {        
         padding: 21px;      
