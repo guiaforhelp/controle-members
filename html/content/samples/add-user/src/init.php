@@ -21,7 +21,7 @@ function listMembersAddUser($id_page){
             if(countDbData('ID') > 0){
                 tables('table-members', 
                         array(
-                            __link('nome', '#'), 
+                            __link('nome', '?page-id=3&edit=$ID'), 
                             'validade_carteirinha', 
                             'situacao_membro', 
                             'cargo'

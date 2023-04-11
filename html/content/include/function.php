@@ -72,6 +72,11 @@ function countDbData($date){
     return $count->countDb($date);
 }
 
+function search($id, $table, $data){
+    $search = new conectDB();
+    return $search->searchDb($id, $table, $data);
+}
+
 function tables($table, $date, $date_external, $orders){
     $tableDb = new conectDB();
     return $tableDb->tableDb($table, $date, $date_external, $orders);

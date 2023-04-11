@@ -24,7 +24,7 @@ function sample(){
     //     'ESte é um teste para ver se vai dar certo');
 
     // selectMembers(array('nome'), 'ASC');
-    // updateMembers('13', 'estado_civil', 'solteiro');
+    // updateMembers('4', 'rg', '123.456.789.89');
     // deleteMembers('14');  
 
     loadPagesSample();         

@@ -35,6 +35,23 @@ class conectDB extends classMembres {
         }
     }
 
+    public function searchDb($id, $table, $data){
+        $array_type = array(
+            'table-members' => 'control_members'
+        );
+
+        $table_array = $array_type[$table];
+
+        $sql = $this->conect()->prepare("SELECT * FROM $table_array WHERE ID=$id");
+        $sql->execute();
+        $sql_member = $sql->fetchAll();
+
+        
+        foreach($sql_member as $sql_members){              
+            return $sql_members[$data];
+        }
+    }
+
     public function insertDb(
         $member, 
         $rg, 
@@ -150,12 +167,13 @@ class conectDB extends classMembres {
         foreach($sql_tables as $tables){
             echo '<tr>';
             foreach($date as $dates){
-                $date_explode = explode('%%', $dates);
-               
+                $date_explode = explode('%%', $dates);  
+                @$link_sql = explode('$', $date_explode[1]);                            
+                
                 if(!in_array(@$date_explode[1], $date_explode)){
                     echo '<td>'.$tables[$date_explode[0]].'</td>';                     
                 }else {
-                    echo '<td><a href="'.@$date_explode[1].'">'.$tables[$date_explode[0]].'</a></td>';                      
+                    echo '<td><a href="'.@$link_sql[0].$tables[$link_sql[1]].'">'.$tables[$date_explode[0]].'</a></td>';                      
                 }                                
             }   
             

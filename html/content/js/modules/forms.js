@@ -45,11 +45,17 @@ const form_validation = {
 
     tags() {
 
-        for (let data_form of form_head.get('input[type="data"]')) {
-            if(data_form.value == '0001-01-01'){
-                console.log(data_form.value);
+        for(let date_form of form_head.getAll('input[type="date"]')) {
+            if(date_form.value == '0001-01-01'){
+                date_form.value = null;                
             }
         }
+
+        for(let text_form of form_head.getAll('input[type="text"]')){
+            if(text_form.value == '0'){
+                text_form.value = null;
+            }
+        }        
     }
 
 }
