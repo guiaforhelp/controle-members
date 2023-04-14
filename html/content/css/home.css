@@ -29,6 +29,12 @@
     cursor: not-allowed;
 }
 
+@media only screen and (max-width: 1024px){
+    .container-list-members {        
+        gap: 29px;
+    }
+}
+
 @media only screen and (max-width: 600px) {  
     .container-list-members a i {        
         padding: 21px;      

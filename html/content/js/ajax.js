@@ -35,7 +35,7 @@
 // Cadastro de usuarios
 $('#form-new-member').submit(()=> {   
     $.ajax({
-        url: "http://localhost/",
+        url: "",
         method: "POST",
         data: {
             addname: $('#add-name').val(), 

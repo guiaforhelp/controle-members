@@ -89,3 +89,28 @@ input[type='submit']:hover {
     border: 1px solid #df1919 !important;
     background: #fff3f3;
 }
+
+@media only screen and (max-width: 1024px) {
+    .panel {        
+        left: 89px;
+    }
+
+    .containers {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+
+    .container-list-members {
+        flex-direction: row;
+        gap: 85px;
+    }
+
+    .container-list-members, .container-all-list {       
+        padding: 31px;       
+    }
+
+    .container-all-list a {
+        display: flex;
+        padding: 19px 11px;
+    }
+}

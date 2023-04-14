@@ -5,8 +5,8 @@
         <div class="search">
             <p>ADICIONAR - EDITAR - REMOVER</p> 
                 <form method="get">
-                    <input type="search" name="search_members" id="search_members" placeholder="Procurar por membro">
-                    <input type="submit" value="Buscar">
+                    <input type="search" name="search_members" disabled id="search_members" placeholder="Procurar por membro">
+                    <input type="submit" disabled value="Buscar">
                 </form>
         </div>   
     

@@ -5,14 +5,14 @@
         <div class="search">
             <p>ADICIONAR - EDITAR - REMOVER</p> 
                 <form method="get">
-                    <input type="search" name="search_members" id="search_members" placeholder="Procurar por membro">
-                    <input type="submit" value="Buscar">
+                    <input type="search" name="search_members" disabled id="search_members" placeholder="Procurar por membro">
+                    <input type="submit" disabled value="Buscar">
                 </form>
         </div>   
     
        <div class="containers">
             <!-- Adicionar - Editar - Remover -->
-            <div class="container-list-members">
+            <!-- <div class="container-list-members">
                 <div class="list-user">
                     <a href="?page-id=<?php echo sanitization('get', 'page-id', 'int'); ?>&type=add">
                         <i class="ph-user-plus-bold"></i><p>Adicionar</p>
@@ -28,7 +28,7 @@
                     <i class="ph-user-minus-bold"></i><p>Removidos</p>
                 </a>
                 </div>
-            </div>
+            </div> -->
     
             <!-- Lista de usuário -->
         <div class="container-all-list">
