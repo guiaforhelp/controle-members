@@ -39,20 +39,19 @@ if(sanitization('post', 'addname', 'url')){
 
 }
 
-if(sanitization('post', 'eidtid', 'url')){
+if(sanitization('post', 'eidtid', 'string')){
 
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'rg', sanitization('post', 'editrg', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'data_nascimento', sanitization('post', 'editdatanasc', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'estado_civil', sanitization('post', 'editestcivil', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'naturalidade', sanitization('post', 'editnatestado', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'endereco', sanitization('post', 'editnatcidade', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'n_endereco', sanitization('post', 'editnend', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'cep', sanitization('post', 'editcep', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'cidade', sanitization('post', 'editendcidade', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'data_batismo', sanitization('post', 'editdatabatismo', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'validade_carteirinha', sanitization('post', 'editvalcarteirinha', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'situacao_membro', sanitization('post', 'editsitumembro', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'cargo', sanitization('post', 'editcargo', 'url'));
-    updateMembers(sanitization('post', 'eidtid', 'url'), 'obs', sanitization('post', 'editobs', 'url'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'rg', sanitization('post', 'editrg', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'data_nascimento', sanitization('post', 'editdatanasc', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'estado_civil', sanitization('post', 'editestcivil', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'naturalidade', sanitization('post', 'editnatestado', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'endereco', sanitization('post', 'editnatcidade', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'n_endereco', sanitization('post', 'editnend', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'cep', sanitization('post', 'editcep', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'cidade', sanitization('post', 'editendcidade', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'data_batismo', sanitization('post', 'editdatabatismo', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'validade_carteirinha', sanitization('post', 'editvalcarteirinha', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'situacao_membro', sanitization('post', 'editsitumembro', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'cargo', sanitization('post', 'editcargo', 'string'));
+    updateMembers(sanitization('post', 'eidtid', 'string'), 'obs', sanitization('post', 'editobs', 'string'));
 }
-

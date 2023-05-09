@@ -183,7 +183,12 @@ function sanitization($input, $value, $type){
         "post" => INPUT_POST
     );
 
-    return filter_input($input_array[$input], $value, $type_array[$type]); 
+    if($input == 'string'){
+        $str = preg_replace('/\x00|<[^>]*>?/', '', $value);
+        return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
+    }else {
+        return filter_input($input_array[$input], $value, $type_array[$type]);     
+    } 
 }
 
 function pluginUrl($url){     
