@@ -24,5 +24,5 @@ foreach(navMenu()->menu_horizontal as $menu_nav){
     }
 }
 ?>
-<p>v1.0.0 (beta)</p>
+<p>v<?= CRPM_VERSION ?> (beta)</p>
 </div>

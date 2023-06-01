@@ -175,7 +175,8 @@ function sanitization($input, $value, $type){
         "special_chars" => FILTER_SANITIZE_SPECIAL_CHARS,
         "int" => FILTER_SANITIZE_NUMBER_INT,        
         "emai" => FILTER_SANITIZE_EMAIL,
-        "url" => FILTER_SANITIZE_URL    
+        "url" => FILTER_SANITIZE_URL,
+        "string" => FILTER_DEFAULT    
     );
 
     $input_array = array(
@@ -183,12 +184,12 @@ function sanitization($input, $value, $type){
         "post" => INPUT_POST
     );
 
-    if($input == 'string'){
-        $str = preg_replace('/\x00|<[^>]*>?/', '', $value);
-        return str_replace(["'", '"'], ['&#39;', '&#34;'], $str);
-    }else {
-        return filter_input($input_array[$input], $value, $type_array[$type]);     
-    } 
+    $type_filter = filter_input_array($input_array[$input], $type_array[$type]);
+    
+    if(isset($type_filter[$value])){           
+        $string_filter = preg_replace('/\x00|<[^>]*>?/', '', $type_filter[$value]);   
+        return $string_filter;
+    }    
 }
 
 function pluginUrl($url){     

@@ -11,7 +11,7 @@ registreScript(array(
         <a href="<?php echo hostUrlPrin('url-prin') ?>"><img src="<?php echo urlLogoTipo('logo') ?>" alt="Logotipo"></a>
         <i class="ph-list-bold"></i>
     </div>
-    <p>Cristo é a Resposta para o Mundo v1.0.0 (beta)</p>
+    <p>Cristo é a Resposta para o Mundo v<?= CRPM_VERSION ?> (beta)</p>
     <i class="ph-bell-ringing-bold"></i>    
 </div>
 
@@ -35,7 +35,7 @@ registreScript(array(
     }
     ?>
 
-    <p>v1.0.0 (beta)</p>
+    <p>v<?= CRPM_VERSION ?> (beta)</p>
 </div>
 
  

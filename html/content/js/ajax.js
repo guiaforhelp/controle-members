@@ -33,6 +33,7 @@
 
 
 // Cadastro de usuarios
+///content/include/validation.php
 $('#form-new-member').submit(()=> {   
     $.ajax({
         url: "",
@@ -108,3 +109,4 @@ $('#edit_members').submit((event)=>{
         console.log('carregado com sucesso');
     });
 });
+

@@ -56,12 +56,37 @@ const form_validation = {
                 text_form.value = null;
             }
         }        
+    },
+
+    mask(element){
+        form_head.get(element).addEventListener('keyup', (event)=>{           
+            var search_mask = event.target;   
+            
+            if(parseInt(search_mask.value.length) <= 10 && parseInt(search_mask.value.length) <=14){    
+                console.log('menor que 10');  
+                console.log(parseInt(search_mask.value.length));          
+                search_mask.value=search_mask.value.replace(/(\d{2})(\d{4})(\d{4})$/,"($1) $2-$3"); 
+            }else if(parseInt(search_mask.value.length) >= 15){
+                console.log('maior que 10');
+                console.log(parseInt(search_mask.value.length));
+                search_mask.value=search_mask.value.replace(/(\d{2})(\d{1})(\d{4})(\d{4})$/,"($1) $2 $3-$4");
+            }
+        });
+
+    },
+
+    convertUppercase(element){
+        form_head.get(element).addEventListener('keyup', (event)=>{
+            event.target.value = event.target.value.toUpperCase();
+        });
     }
 
 }
 
 export function init(element, element2, content, content2){
     form_validation.tags();
+    form_validation.mask('#tel');
+    form_validation.convertUppercase('#cidade_natu');
 
     if(form_head.get(element) !== null){
         form_head.form(element, element2, content, content2);

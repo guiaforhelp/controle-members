@@ -1,5 +1,5 @@
 <?php
-define('CRPM_VERSION', '1.0');
+define('CRPM_VERSION', '1.1.1');
 
 //--Parametros para conexão com banco de dados
 // ** Configurações do MySQL  ** //

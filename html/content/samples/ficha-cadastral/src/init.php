@@ -19,11 +19,15 @@
                 <div class="date-container">
                     <div class="date-child">
                         <span>RG OU CPF</span>
-                        <input type="text" name="rg" id="rg" placeholder="RG ou CPF" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'rg') ?>">
+                        <input type="text" name="rg" id="rg" placeholder="RG" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'rg') ?>">
                     </div>
                     <div class="date-child">
                         <span>DATA DE NASCIMENTO</span>
                         <input type="date" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimento" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'data_nascimento') ?>">
+                    </div>
+                    <div class="date-child">
+                        <span>TELEFONE</span>
+                        <input type="tel" maxlength="15" name="tel" id="tel" placeholder="exemplo: (11) 11111-1111" value="<?php echo search(sanitization('get', 'edit', 'url'), 'table-members', 'telefone') ?>">
                     </div>
                     <div class="date-child">
                         <span>ESTADO CIVIL</span>
